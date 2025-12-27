@@ -65,11 +65,24 @@ streamlit run app.py
 
 The app will open at `http://localhost:8501`
 
+## 🧾 Generate the PDF Report
+
+This repository includes an automated report generator that reproduces the core notebook workflow (EDA + evaluation) and outputs a professional PDF.
+
+```bash
+python generate_pdf_report.py --data path\\to\\vehicles.csv --out Fuel_Consumption_Report.pdf
+```
+
+Outputs:
+- `Fuel_Consumption_Report.pdf` (or the path you pass via `--out`)
+- `report_assets/` (figures embedded into the PDF)
+
 ## 📁 Project Structure
 
 ```
 Models/
 ├── app.py                      # Main Streamlit application
+├── generate_pdf_report.py       # PDF report generator
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
 ├── random_forest_model.pkl     # Random Forest model
@@ -91,7 +104,11 @@ Models/
 - streamlit >= 1.28.0
 - pandas >= 1.5.0
 - numpy >= 1.24.0
+- joblib >= 1.3.0
 - scikit-learn == 1.6.1
+- matplotlib >= 3.8.0
+- seaborn >= 0.13.0
+- reportlab >= 4.0.0
 - lightgbm >= 4.0.0
 - xgboost >= 2.0.0
 - catboost >= 1.2.0

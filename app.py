@@ -253,10 +253,10 @@ with st.sidebar:
     )
     
     st.markdown("---")
-    st.markdown("### ⛽ Fuel Consumption")
+    st.markdown("###  Factory index")
     
     combined_consumption = st.number_input(
-        "Combined (L/100 km)",
+        "Combined",
         min_value=1.0,
         max_value=28.0,
         value=8.5,
